@@ -10,22 +10,22 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey("d"))
+        if (Input.GetKey("s"))
         {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
         }
 
-        if (Input.GetKey("a"))
+        if (Input.GetKey("w"))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
         }
 
-        if (Input.GetKey("w"))
+        if (Input.GetKey("d"))
         {
             rb.AddForce(0, 0, forwardForce * Time.deltaTime);
         }
 
-        if (Input.GetKey("s"))
+        if (Input.GetKey("a"))
         {
             rb.AddForce(0, 0, -forwardForce * Time.deltaTime);
         }
