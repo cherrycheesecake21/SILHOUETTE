@@ -1,45 +1,32 @@
+using System.Numerics;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour {
 
     // Establishing an object to call.
     public  Rigidbody rb;
 
-    // Establishing float values.
-    public float forwardForce = 2000f;
-    public float sidewaysForce = 2000f;
-    public float RotateSpeed = 2000f;
-
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Here we are storing the value of the horizontal and vertical inputs.
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        //And here we call the rotate speed as we rotate the player, based on input.
-        transform.Rotate(Vector3.up * horizontalInput * RotateSpeed * Time.deltaTime);
-        transform.Rotate(Vector3.up * verticalInput * RotateSpeed * Time.deltaTime);
-
-        // Here we are calling the player's input.
-        if (Input.GetKey("s"))
+        // Here we are calling the player input and moving in that direction.
+        if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+            transform.Translate(0.1f, 0f, 0f);
         }
-
-        if (Input.GetKey("w"))
+        if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+            transform.Translate(-0.1f, 0f, 0f);
         }
-
-        if (Input.GetKey("d"))
+        if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+            transform.Translate(0.0f, 0f, -0.1f);
         }
-
-        if (Input.GetKey("a"))
+        if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(0, 0, -forwardForce * Time.deltaTime);
+            transform.Translate(0.0f, 0f, 0.1f);
         }
     }
 }
