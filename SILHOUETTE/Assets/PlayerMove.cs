@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
 
     public float speed = 8.0f;
     private Rigidbody m_Rb;
-    private float m_SpeedModifier = 1f;
+    private float m_SpeedModifier = 10f;
 
     void Awake()
     {
