@@ -881,7 +881,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233057127}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86bed87173279a043b7cd00c59220027, type: 3}
   m_Name: 
@@ -1811,7 +1811,7 @@ PrefabInstance:
       objectReference: {fileID: 1233057128}
     - target: {fileID: 5998534418706828890, guid: 142b12da58ed2594c9d3d9f8c5ab9826, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5998534418706828890, guid: 142b12da58ed2594c9d3d9f8c5ab9826, type: 3}
       propertyPath: RotateSpeed

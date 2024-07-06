@@ -34,6 +34,5 @@ public class PlayerMove : MonoBehaviour
 
         m_Rb.MovePosition(m_Rb.position + movement * m_SpeedModifier * Time.fixedDeltaTime);
         m_Rb.MoveRotation(targetRotation);
-        m_Rb.AddRelativeForce((Vector3.forward * 0.5f) * 250f, ForceMode.Force);
     }
 }
